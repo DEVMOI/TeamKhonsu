@@ -1,2 +1,2 @@
 # Khonsubot
-Team Khonsu's Community TwitchBot
+#Team Khonsu's Community TwitchBot

@@ -43,6 +43,8 @@ body {
 
 /* Jumbotron CSS */
 .jumbotron{
+  color:#000;
+  
   background-image: url('../img/jumbo-bg.png');
   background-position: center;
   

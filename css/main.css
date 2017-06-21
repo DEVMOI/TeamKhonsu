@@ -5,7 +5,6 @@ html {
 }
 /* Show it is fixed to the top */
 body {
-  min-height: 75rem;
   padding-top: 4.5rem;
 ` background: #000;`
 }
@@ -16,28 +15,18 @@ body {
   margin-bottom: 0;
   border-radius: 0;
 }
+/*                            END                                */
 .twitchStreams{
   min-width: 100%;
   margin:0 auto;
   display: block;
 }
-.results-section{
-  dispaly:block;
-  margin:1px auto;
-}
+
 .theCard{
   width: 300px;
 }
 
-/* Set black background color, white text and some padding */
+
 .footer {
-  display:block;
-  position:absolute;
-  width: 100%;
-  bottom: 0;
-  background-color: #000;
-  color: white;
-  
-  margin-top:10px;
-  padding:0;
+
 }

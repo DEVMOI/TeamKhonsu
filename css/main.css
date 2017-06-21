@@ -68,9 +68,11 @@ body {
 .row.card-container{
   margin-left:0;
   margin-right:0;
+  align-items: center;
 }
 .theCard{
   width: 300px;
+  align-items: center;
 }
 
 /* ////////////////////////////////////////////////////////////// */

@@ -42,7 +42,7 @@ $(document).ready(function() {
 
           //IF EVERYTHING IS A SUCCESS IT BUILDS A STREAMCARD//
 
-          streamCard = "<div class='theCard online'>" + "<a class='card-link' target='_blank' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'><strong>" + streamGame + ": </strong>" + streamInfo + "</p></div></div></div></a></div>";
+          streamCard = "<div class='theCard online'>" + "<a class='card-link' target='_blank' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'><strong>" + streamGame + ": </strong>" + streamInfo + "</p></div></div></div></a></div>";
           $(".card-container").append(streamCard);
        } else {
           // If the channel is offline, get channel data

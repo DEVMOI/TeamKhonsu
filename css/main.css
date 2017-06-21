@@ -19,7 +19,11 @@ body {
   border-radius: 0;
 }
 /*                            END                                */
-
+/* Jumbotron CSS */
+.jumbotron{
+  background-image: url('../img/jumbo-bg.png');
+}
+/* END */
 .twitchStreams{
   min-width: 100%;
   display: block;

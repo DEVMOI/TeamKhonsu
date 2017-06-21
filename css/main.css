@@ -46,8 +46,9 @@ body {
   background-image: url('../img/jumbo-bg.png');
   background-position: center;
   
-  height: 900px;
+  height: 950px;
   
+  margin-top:10px;
   margin-bottom: 0;
 }
 /* END */

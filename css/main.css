@@ -1,15 +1,17 @@
-
+/* 
 html {
   position: relative;
   min-height: 100%;
-}
+} */
 /* Show it is fixed to the top */
 body {
   padding-top: 4.5rem;
 ` background: #000;
+
+}
+.wrap{
   margin: 0 auto;`
 }
-
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
   display: block;

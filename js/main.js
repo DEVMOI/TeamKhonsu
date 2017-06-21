@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var twitchUserName = ['frogsama','vvarrenstudios',"thenutzxd",'jamaica105'];
+  var twitchUserName = ['frogsama','vvarrenstudios',"thenutzxd",'jamaica105','michiganspartan','ritterriffic'];
 
   //Iterate through the array of usernames and call getTwitch
   twitchUserName.forEach(function(name) {

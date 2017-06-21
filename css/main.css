@@ -44,6 +44,10 @@ body {
 /* Jumbotron CSS */
 .jumbotron{
   background-image: url('../img/jumbo-bg.png');
+  background-position: center;
+  
+  height:400px;
+  
   margin-bottom: 0;
 }
 /* END */

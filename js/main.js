@@ -92,7 +92,7 @@ $(document).ready(function() {
                   }
                 })
               } else { // If account exists, but user is not currently streaming, build streamCard
-                streamCard = "<div class='theCard offline'>"+"<div class='card'>"+"<img class='img-fluid banner' src='" + streamBanner + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>"+"<div class='card-block'>"+"<img class='pull-left round-logo img-responsivelogo' src='" + streamLogo + "' alt='" + twitchUserName + "  logo'>"+"<div class='text-padding'>"+"<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></div>";
+                streamCard = "<div class='theCard offline'>"+"<div class='card'>"+"<img class='img-fluid banner' src='" + streamBanner + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>"+"<div class='card-block'>"+"<img class='pull-left round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "  logo'>"+"<div class='text-padding'>"+"<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></div>";
                 $(".card-container").append(streamCard);
               }
             }

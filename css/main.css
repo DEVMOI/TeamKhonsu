@@ -25,7 +25,9 @@ body {
 .theCard{
   width: 300px;
 }
-
+.card-text{
+  font-size:10px;
+}
 .logo{
  border-radius:100%;
  height:25px;

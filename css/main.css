@@ -107,7 +107,8 @@ body {
 
 /* Jumbotron CSS */
 .jumbotron{
-  height: 900px;
+  height: 600px;
+  vertical-align: middle;
 }
 /* END */
 

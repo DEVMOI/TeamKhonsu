@@ -6,7 +6,8 @@ html {
 /* Show it is fixed to the top */
 body {
   padding-top: 4.5rem;
-` background: #000;`
+` background: #000;
+  margin: 0 auto;`
 }
 
 /* Remove the navbar's default margin-bottom and rounded borders */

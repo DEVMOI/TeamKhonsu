@@ -16,10 +16,7 @@ body {
   margin-bottom: 0;
   border-radius: 0;
 }
-#main{
-  margin:0;
-  max-height: 1000px;
-}
+
 .twitchStreams{
   min-width: 100%;
   margin:0 auto;
@@ -27,23 +24,6 @@ body {
 }
 .theCard{
   width: 300px;
-}
-
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {
-  height: 1000px;
-}
-
-/* Set gray background color and 100% height */
-.sidenav {
-  padding: 20px;
-  background-color: #f1f1f1;
-  height: 100%;
-}
-.well{
-  vertical-align: middle;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 /* Set black background color, white text and some padding */

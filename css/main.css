@@ -16,11 +16,14 @@ body {
   margin-bottom: 0;
   border-radius: 0;
 }
-
 .twitchStreams{
   min-width: 100%;
   margin:0 auto;
   display: block;
+}
+.results-section{
+  dispaly:block;
+  margin:1px auto;
 }
 .theCard{
   width: 300px;

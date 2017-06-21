@@ -50,6 +50,8 @@ body {
   
   margin-top:10px;
   margin-bottom: 0;
+  
+  vertical-align: middle;
 }
 /* END */
 
@@ -103,7 +105,7 @@ body {
 
 /* Jumbotron CSS */
 .jumbotron{
-  height: 925px;
+  height: 900px;
 }
 /* END */
 

@@ -30,6 +30,7 @@ body {
 
 /* Jumbotron CSS */
 .jumbotron{
+  display: block;
   color:#fff;
   
   background-image: url('../img/jumbo-bg.png');
@@ -60,6 +61,9 @@ body {
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
+.result-section{
+  display: block;
+}
 .row.card-container{
   margin-left:0;
   margin-right:0;

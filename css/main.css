@@ -8,8 +8,7 @@ html {
 /* ////////////////////////////////////////////////////////////// */
 
 body {
-  padding-top: 4.5rem;
-` background: #000;
+  background: #000;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -36,7 +35,7 @@ body {
   background-image: url('../img/jumbo-bg.png');
   background-position: center;
   
-  height: 200px;
+  height: 300px;
   
   margin: 0;
 }

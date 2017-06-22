@@ -36,13 +36,13 @@
 }
 
 /*MEDIA QUERY*/
-@media all and (min-width: 600px) {
+/* @media all and (min-width: 600px) {
   /* We tell both sidebars to share a row */
   .twitch {
     flex: 1 auto;
    }
 }
-
+ */
 /* Large screens */
 @media all and (min-width: 800px) {
   /* We invert order of first sidebar and main
@@ -51,18 +51,18 @@
   .main {
     flex: 3 0px;
    }
-  .twitch {
+  .jumbotron {
     order: 1;
     flex-grow:1;
    }
-  .streamStatus {
+  .stream-section {
     order: 2;
     flex-grow:1;
    }
-  /*.streamChat {
+  .stream-family {
     order: 3;
     flex-grow:1;
-   }*/
+   } 
   .footer  {
     order: 4;
    }

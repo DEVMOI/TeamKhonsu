@@ -17,8 +17,8 @@ body {
 
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  margin-bottom: 0;
-  padding-bottom:0;
+  margin: 0;
+  padding:0;
   border-radius: 0;
 }
 /*                            END                                */
@@ -37,6 +37,7 @@ body {
   height: 300px;
   
   margin: 0;
+  padding:0;
 }
 /* END */
 

@@ -1,16 +1,16 @@
 /* Make row heights even */
-.row{
+/* .row{
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display:        flex;
   flex-wrap: wrap;
-}
+} */
 
-.row > [class*='col-']{
+/* .row > [class*='col-']{
   display: flex;
   flex-decoration:column;
-}
+} */
 /*FLEX CSS*/
 .wrap{
   display: -webkit-box;
@@ -25,7 +25,6 @@
   font-weight: bold;
   text-align: center;
 }
-.jumbotron,
 .stream-section,
 .stream-family,
 .footer {
@@ -51,19 +50,16 @@
   .main {
     flex: 3 0px;
    }
-  .jumbotron {
+
+  .stream-section {
     order: 1;
     flex-grow:1;
    }
-  .stream-section {
-    order: 2;
-    flex-grow:1;
-   }
   .stream-family {
-    order: 3;
+    order: 2;
     flex-grow:1;
    } 
   .footer  {
-    order: 4;
+    order: 3;
    }
 }

@@ -27,11 +27,12 @@
 }
 .jumbotron,
 .main,
-.aside,
+.stream-section,
+.stream-family,
 .footer {
   flex: 1 100%;
 }
-.wrapper > * {
+.wrap > * {
   flex: 1 100%;
 }
 

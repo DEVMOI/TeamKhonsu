@@ -34,10 +34,9 @@ body {
   background-image: url('../img/jumbo-bg.png');
   background-position: center;
   
-  height: 300px;
+  height: 200px;
   
   margin: 0;
-  padding:0;
 }
 /* END */
 
@@ -130,7 +129,6 @@ body {
 /* Jumbotron CSS */
 .jumbotron{
   height: 225px;
-  padding:0;
 }
 /* END */
 

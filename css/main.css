@@ -69,6 +69,7 @@ body {
 /* ////////////////////////////////////////////////////////////// */
 .result-section{
   display: block;
+  right:0;
 }
 .row.card-container{
   margin:0;

@@ -9,8 +9,6 @@ html {
 
 body {
   background: #000;
-  margin:auto;
-  padding:auto;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -31,7 +29,6 @@ body {
 
 /* Jumbotron CSS */
 .jumbotron{
-  display: block;
   color:#fff;
   
   background-image: url('../img/jumbo-bg.png');

@@ -19,7 +19,7 @@ body {
 
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  display: block;
+  position:sticky;
   margin-bottom: 0;
   border-radius: 0;
 }

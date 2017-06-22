@@ -17,8 +17,8 @@ body {
 
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
-  position:relative;
   margin-bottom: 0;
+  padding-bottom:0;
   border-radius: 0;
 }
 /*                            END                                */

@@ -1,5 +1,4 @@
 html {
-  position: relative;
   min-height: 100%;
 } 
 
@@ -17,6 +16,7 @@ body {
 
 /* Remove the navbar's default margin-bottom and rounded borders */
 .navbar {
+  margin:0;
   padding:0;
   border-radius: 0;
 }
@@ -37,9 +37,8 @@ body {
   background-image: url('../img/jumbo-bg.png');
   background-position: center;
   
-  height: 200px;
-  
   margin:0;
+  padding:0;
 }
 /* END */
 
@@ -47,7 +46,8 @@ body {
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 .twitch{
-  margin-bottom:0;
+  margin:0;
+  padding:0;;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -57,6 +57,8 @@ body {
 .twitchStreams{
   min-width: 100%;
   display: block;
+  margin:0;
+  padding:0;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -66,11 +68,14 @@ body {
   display: block;
 }
 .row.card-container{
-  margin-left:0;
-  margin-right:0;
+  margin:0;
+  padding:0;
   align-items: center;
 }
 .theCard{
+  margin:0;
+  padding:0;
+  
   width: 300px;
   align-items: center;
 }

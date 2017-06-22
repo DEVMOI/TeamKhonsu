@@ -30,6 +30,8 @@ body {
   display:block;
   color:#fff;
   
+  height:500px;
+  
   background-image: url('../img/jumbo-bg.png');
   background-position: center;
   

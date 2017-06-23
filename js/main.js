@@ -1,11 +1,23 @@
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
 $(document).ready(function() {
-  var twitchUserName = ['frogsama','vvarrenstudios',"thenutzxd",'jamaica105','michiganspartan','ritterriffic'];
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+  var twitchUserName = ['frogsama','vvarrenstudios',"thenutzxd",'jamaica105','michiganspartan','ritterriffic','kazzandrah','vexnexo','stonertrixx'];
+
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
 
   //Iterate through the array of usernames and call getTwitch
   twitchUserName.forEach(function(name) {
     getTwitch(name)
   });
-
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
   //Activate Nav Pills
   $(".selector").click(function() {
 		var status = $(this).attr('id');
@@ -20,10 +32,9 @@ $(document).ready(function() {
 		}
 	})
   //Add Video to Top
-  $("").click(function() {
-		var streamUser = $(this).attr('alt');
-		alert(streamUser);
-	})
+  $('.card-link').on('click', function(){
+				var iframeSrc = $('iframe').attr('src', video);
+			})
 });
 
 //GET TWITCH API INFO
@@ -47,7 +58,7 @@ $(document).ready(function() {
 
           //IF EVERYTHING IS A SUCCESS IT BUILDS A STREAMCARD//
 
-          streamCard = "<div class='theCard online col-xs-8 col-md-4'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'><strong>" + streamGame + ": </strong>" + streamInfo + "</p></div></div></div></a></div>";
+          streamCard = "<div class='theCard online col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'><strong>" + streamGame.toUpperCase() + ": </strong>" + streamInfo.toUpperCase() + "</p></div></div></div></a></div>";
           $(".card-container").append(streamCard);
        } else {
           // If the channel is offline, get channel data
@@ -80,27 +91,27 @@ $(document).ready(function() {
                     //IF ACCOUNT HAS BEEN CLOSED BUILD STREAMCARD
                     if(streamMessage == "Unprocessable Entity"){
 
-                      streamCard = "<div class='theCard offline col-xs-8 col-md-4'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'>This Twitch account has been closed.</p></div></div></div></a></div>";
+                      streamCard = "<div class='theCard offline col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'>This Twitch account has been closed.</p></div></div></div></a></div>";
                   $(".card-container").append(streamCard);
 		    } else if (streamMessage == "Not Found"){
                     //IF IT NEVER EXISTED
-                    streamCard = "<div class='theCard offline col-xs-8 col-md-4'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'>This Twitch account never existed.</p></div></div></div></a></div>";
+                    streamCard = "<div class='theCard offline col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'>This Twitch account never existed.</p></div></div></div></a></div>";
                     $(".card-container").append(streamCard);
                     }else if (streamBanner == null && streamLogo == null){
                     //IF Banner AND  Logo don't Work                  
-                    streamCard = "<div class='theCard offline col-xs-8 col-md-4'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card oro2'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
+                    streamCard = "<div class='theCard offline col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card oro2'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
                     $(".card-container").append(streamCard);
                     }
                     else if (streamBanner == null){
                     //IF Banner Doesn't Exist  
-                    streamCard = "<div class='theCard offline col-xs-8 col-md-4'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card oro2'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
+                    streamCard = "<div class='theCard offline col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card oro2'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
                     $(".card-container").append(streamCard);
                     }
                   }
                 })
               } else { // If account exists, but user is not currently streaming, build streamCard
 
-                streamCard = "<div class='theCard offline col-xs-8 col-md-4'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamBanner + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
+                streamCard = "<div class='theCard offline col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamBanner + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='pull-left round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
                 $(".card-container").append(streamCard);
               }
             }
@@ -109,4 +120,4 @@ $(document).ready(function() {
       }
     })
 
-  } //END OF FUNCTION);
+  }

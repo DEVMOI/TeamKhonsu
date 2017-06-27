@@ -7,12 +7,31 @@ html {
 /* ////////////////////////////////////////////////////////////// */
 
 body {
+  font-family: Hind,"sans-serif";
   background: #000;
   margin-top: 49px;
 }
 
 /* ////////////////////////////////////////////////////////////// */
+/* //////////////////// Scroll Bar Css ////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
+
+body::-webkit-scrollbar {
+    width: .2em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  outline: 1px solid #fff;
+}
+
+
+/* ////////////////////////////////////////////////////////////// */
+/* /////////////////////// NAVBAR CSS /////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 
 /* Remove the navbar's default margin-bottom and rounded borders */
@@ -30,10 +49,11 @@ body {
 .jumbotron{
   color:#fff;
 
-  height:200px;
+  height:300px;
 
-  background-image: url('../img/jumbo-bg.png');
+  background-image: url('https://images2.alphacoders.com/731/thumb-1920-731784.png');
   background-position: center;
+  background: cover;
 
   margin:0;
   padding:auto;
@@ -72,18 +92,23 @@ body {
 /* ////////////////////////////////////////////////////////////// */
 .results-section{
   align-content: space-around;
+  text-align: center;
 }
 .row.card-container{
   margin:0;
   padding:0;
   align-items: center;
+  text-align: center;
 }
 .theCard{
   margin:5px auto;
   padding:0;
- align-items: center;
+
+  width: 500px;
 }
 .card-text{
+  text-align: center;
+  margin: 0 auto;
   height:25px;
 }
 
@@ -101,8 +126,12 @@ body {
 
 .logo{
  border-radius:100%;
- height:25px;
- width:25px;
+
+ height:50px;
+ width:50px;
+
+ padding: 0;
+ margin: auto;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -143,7 +172,11 @@ body {
 
 /* Jumbotron CSS */
 .jumbotron{
-  height: 225px;
+  height: 730px;
+}
+.jumbotron h1{
+  line-height: 8;
+  text-align: center;
 }
 /* END */
 .twitch{

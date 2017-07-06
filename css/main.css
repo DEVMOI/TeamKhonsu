@@ -105,7 +105,7 @@ body::-webkit-scrollbar-thumb {
   margin:5px auto;
   padding:0;
 
-  width: 525px;
+  width: 200px;
 
   border:#000;
 }
@@ -160,6 +160,9 @@ body::-webkit-scrollbar-thumb {
     font-size: 15px;
     line-height: 0;
     padding:0;
+  }
+  .theCard{
+    width: 525px;
   }
 
 /* ////////////////////////////////////////////////////////////// */

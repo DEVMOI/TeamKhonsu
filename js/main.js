@@ -31,10 +31,7 @@ $(document).ready(function() {
 			$(".online").hide();
 		}
 	})
-  //Add Video to Top
-  $('.card-link').click(function(){
-		var iframeSrc = $(this).attr('src', video);
-	})
+  
 });
 
 //GET TWITCH API INFO

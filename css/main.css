@@ -52,7 +52,7 @@ body::-webkit-scrollbar-thumb {
 
   height:300px;
 
-  background-image: url('https://images2.alphacoders.com/731/thumb-1920-731784.png');
+  background-image: url('../img/jumbo-bg.jpeg');
   background-position: center;
   background: cover;
 

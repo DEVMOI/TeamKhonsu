@@ -23,15 +23,21 @@ $(document).ready(function() {
 		var status = $(this).attr('id');
 		if (status === "all-streams") {
 			$(".online, .offline").show();
+      $("#all-streams").addClass("active");
+      $("#online, #offline").removeClass("active");
 		} else if (status === "online") {
 			$(".online").show();
 			$(".offline").hide();
+      $("#online").addClass("active");
+      $("#all-streams, #offline").removeClass("active");
 		} else {
 			$(".offline").show();
 			$(".online").hide();
+      $("#offline").addClass("active");
+      $("#all-streams, #online").removeClass("active");
 		}
-	})
-  
+	});
+
 });
 
 //GET TWITCH API INFO

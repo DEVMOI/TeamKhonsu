@@ -50,15 +50,13 @@ body::-webkit-scrollbar-thumb {
 .jumbotron{
   color:#fff;
 
-  /*min-height:300px;*/
-
-
-  background-image: url('../img/jumbo-bg.jpeg');
+  background-image: url('../img/jumbo-bg2.jpeg');
   background-position: center;
-  background: whitesmoke contain;
+  background-size: cover;
+  background-color: whitesmoke;
 
   margin:auto;
-  padding:auto;
+
 }
 .jumbotron h1 {
     font-size: 50px;
@@ -91,7 +89,7 @@ body::-webkit-scrollbar-thumb {
 }
 /*The Top Margin For the results-section selectors*/
 .nav-section{
-  font-size: 20px;
+  font-size: 15px;
   margin-top:10px;
 }
 /* ////////////////////////////////////////////////////////////// */
@@ -148,12 +146,6 @@ body::-webkit-scrollbar-thumb {
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 
-.footer {
-  padding-top: 15px;
-  margin: 0;
-  bottom:0;
-  background-color: #fff;
-}
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
@@ -165,8 +157,6 @@ body::-webkit-scrollbar-thumb {
 
   .jumbotron{
     font-size: 50px;
-    line-height: 0;
-    padding:0;
   }
   .theCard{
     width: 525px;
@@ -188,10 +178,10 @@ body::-webkit-scrollbar-thumb {
 
 /* Jumbotron CSS */
 .jumbotron{
-  height: 730px;
+    padding:255px 0;
 }
+
 .jumbotron h1{
-  line-height: 5;
   text-align: center;
 }
 /* END */

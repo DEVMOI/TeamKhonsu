@@ -57,12 +57,22 @@ $(document).ready(function() {
           var streamInfo = data.stream.channel.status;
           var streamLogo = data.stream.channel.logo;
           var streamURL = 'http://www.twitch.tv/'+ twitchUserName;
+          var defaultImage = "https://media.giphy.com/media/l3q31122uBsO7hpmw/source.gif";
           var streamCard=" ";
 
           //IF EVERYTHING IS A SUCCESS IT BUILDS A STREAMCARD//
+            if (streamLogo !== null){
+              streamCard = "<div class='theCard online col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + '<br>' + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'><strong>" + streamGame.toUpperCase() + ": </strong>" + streamInfo.toUpperCase() + "</p></div></div></div></a></div>";
+              $(".card-container").append(streamCard);
+            }else{
+              streamCard = "<div class='theCard online col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultImage + "' alt='" + twitchUserName + "logo'>" + '<br>' + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'><strong>" + streamGame.toUpperCase() + ": </strong>" + streamInfo.toUpperCase() + "</p></div></div></div></a></div>";
+              $(".card-container").append(streamCard);
+            }
 
-          streamCard = "<div class='theCard online col-xs-8 col-md-4 overlay'>" + "<a disabled class='card-link' href=" + streamURL + "><div class='card'>" + "<img class='img-fluid stream-cap' src='" + streamImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + streamLogo + "' alt='" + twitchUserName + "logo'>" + '<br>' + "<div class='text-padding'>" + "<h4 class='card-title'>" + twitchUserName.toUpperCase() + "</h4><p class='card-text'><strong>" + streamGame.toUpperCase() + ": </strong>" + streamInfo.toUpperCase() + "</p></div></div></div></a></div>";
-          $(".card-container").append(streamCard);
+
+
+
+
        } else {
           // If the channel is offline, get channel data
           $.ajax({

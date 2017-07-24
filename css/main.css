@@ -141,6 +141,11 @@ body::-webkit-scrollbar-thumb {
   .jumbotron{
     font-size: 50px;
   }
+  .theStream{
+    height:275px;
+    padding:0;
+    margin:0;
+  }
   .theCard{
     width: 500px;
   }

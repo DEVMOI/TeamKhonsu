@@ -58,7 +58,7 @@ $(document).ready(function() {
           var streamLogo = data.stream.channel.logo;
           var sreamEmbed = ''
           var streamURL = 'http://www.twitch.tv/'+ twitchUserName;
-          var defaultImage = "https://media.giphy.com/media/l3q31122uBsO7hpmw/source.gif";
+          var defaultImage = 'https://media.giphy.com/media/l3q31122uBsO7hpmw/source.gif';
           var streamCard=" ";
 
           //IF EVERYTHING IS A SUCCESS IT BUILDS A STREAMCARD//

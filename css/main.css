@@ -89,9 +89,7 @@ body::-webkit-scrollbar-thumb {
 .theCard{
   margin:5px auto;
   padding:0;
-
   width: 300px;
-
   border:#000;
 }
 
@@ -104,7 +102,10 @@ body::-webkit-scrollbar-thumb {
  padding: 0;
  margin: auto;
 }
-
+.chatButton{
+  margin: 0 auto;
+  padding: 0;
+}
 .card-text{
   text-align: center;
   margin: 0 auto;
@@ -129,6 +130,13 @@ body::-webkit-scrollbar-thumb {
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 
+@media (min-width:420px) {
+
+  .chat{
+    display: none;
+  }
+
+}
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
@@ -149,6 +157,14 @@ body::-webkit-scrollbar-thumb {
   .theCard{
     width: 500px;
   }
+  .chat{
+    height: 285px;
+    width: 100%;
+    margin:0;
+    padding: 0;
+    display:inline-block;
+  }
+
 
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */

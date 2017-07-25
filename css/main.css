@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb {
 .jumbotron{
   color:#fff;
 
-  background-image: url('../img/jumbo-bg2.jpeg');
+  background-image: url('../img/jumbo-bg2.jpg');
   background-position: center;
   background-size: cover;
   background-color: whitesmoke;

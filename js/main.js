@@ -58,7 +58,7 @@ $(document).ready(function() {
           var streamLogo = data.stream.channel.logo;
           var sreamEmbed = ''
           var streamURL = 'http://www.twitch.tv/'+ twitchUserName;
-          var defaultImage = 'https://media.giphy.com/media/l3q31122uBsO7hpmw/source.gif';
+          var defaultImage = 'https://media.giphy.com/media/26FKZH3iV19wR7uYE/source.gif';
           var streamCard=" ";
 
           //IF EVERYTHING IS A SUCCESS IT BUILDS A STREAMCARD//
@@ -97,7 +97,7 @@ $(document).ready(function() {
                   success: function(data){
                     var streamMessage = data.error;
                     // var streamBanner = data.video_banner;
-                    var defaultImage = "https://media.giphy.com/media/l3q31122uBsO7hpmw/source.gif";
+                    var defaultImage = "https://media.giphy.com/media/EZJIg5PUjdDKU/giphy.gif";
                     var defaultThumb = "https://media.giphy.com/media/l3q31122uBsO7hpmw/source.gif";
                     //IF ACCOUNT HAS BEEN CLOSED BUILD STREAMCARD
                     if(streamMessage == "Unprocessable Entity"){

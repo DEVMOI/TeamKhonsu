@@ -91,6 +91,12 @@ body::-webkit-scrollbar-thumb {
   padding:0;
   width: 300px;
   border:#000;
+  background-color: #000;
+}
+.theCardIMG{
+  width: 300px;
+  padding:0;
+  margin:0;
 }
 
 .logo{
@@ -129,6 +135,17 @@ body::-webkit-scrollbar-thumb {
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
+@media (min-width:280px) {
+
+  .chat{
+    display: none;
+  }
+
+}
+
+/* ////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////// */
 
 @media (min-width:420px) {
 
@@ -153,9 +170,16 @@ body::-webkit-scrollbar-thumb {
     height:275px;
     padding:0;
     margin:0;
+    background-color: #000;
   }
   .theCard{
     width: 500px;
+    background-color: #000;
+  }
+  .theCardIMG{
+    width: 500px;
+    padding:0;
+    margin:0;
   }
   .chat{
     height: 285px;

@@ -86,6 +86,12 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   text-align: center;
 }
+.card{
+  background-color: #19171c;
+}
+.card a{
+  color:#fff;
+}
 .theCard{
   margin:5px auto;
   padding:0;
@@ -117,6 +123,7 @@ body::-webkit-scrollbar-thumb {
   margin: 0 auto;
   height:25px;
   font-size:10px;
+  color: #fff;
 }
 
 /* ////////////////////////////////////////////////////////////// */

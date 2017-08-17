@@ -15,7 +15,7 @@
 $(document).ready(function(){
 
 //STREAM INFO AND STATUS API CALL
-  var twitchUserName = ['SniperNamedG','CMStarke','MewtwoRaves','DarkAcreJack','sideshowmatt','blackdynamitetv','johanmoney','sblindside','vvarrentv',"thenutzxd",'jamaica105','michiganspartan','ritterriffic','injectusdoll'];
+  var twitchUserName = ['relaxbeats','CMStarke','MewtwoRaves','DarkAcreJack','sideshowmatt','blackdynamitetv','johanmoney','sblindside','vvarrentv',"thenutzxd",'jamaica105','michiganspartan','ritterriffic','injectusdoll'];
   // //Iterate through the array of usernames and call getTwitch
   twitchUserName.forEach(function(name) {
     getTwitch(name)

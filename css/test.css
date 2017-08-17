@@ -129,6 +129,8 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
 }
 .cardList{
   height: 50%;
+  margin: 0;
+  padding: 0;
 }
 .theCard{
   margin:5px auto;

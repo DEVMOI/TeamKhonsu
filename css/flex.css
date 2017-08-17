@@ -10,7 +10,7 @@
 .row > [class*='col-']{
   display: flex;
   flex-decoration:column;
-} 
+}
 /*FLEX CSS*/
 .wrap{
   display: -webkit-box;
@@ -37,7 +37,7 @@
 /*MEDIA QUERY*/
 @media all and (min-width: 600px) {
   /* We tell both sidebars to share a row */
-  .twitch {
+  .twitch{
     flex: 1 auto;
    }
 }
@@ -58,11 +58,20 @@
   .twitch {
     order: 2;
     flex-grow:1;
-   } 
+   }
   .stream-family  {
     order: 3;
    }
    .footer  {
      order: 4;
+    }
+
+
+    .teamkhonsu{
+      order:1;
+    }
+    .featured-stream{
+      order:2;
+      flex:2;
     }
 }

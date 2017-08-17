@@ -1,23 +1,3 @@
-html {
-  min-height: 100%;
-}
-/* ////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////// */
-body {
-  font-family: Hind,"sans-serif";
-  background: #000;
-  margin-top: 49px;
-  max-width: 1000;
-}
-
-a{
-  color:#fff;
-  text-decoration none;
-}
-/* ////////////////////////////////////////////////////////////// */
-/* //////////////////// Scroll Bar Css ////////////////////////// */
-/* ////////////////////////////////////////////////////////////// */
 body::-webkit-scrollbar, .teamkhonsu::-webkit-scrollbar {
     width: .2em;
 }
@@ -30,37 +10,6 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
   background-color: #fff;
   outline: 1px solid #fff;
 }
-/* ////////////////////////////////////////////////////////////// */
-/* /////////////////////// NAVBAR CSS /////////////////////////// */
-/* ////////////////////////////////////////////////////////////// */
-/* Remove the navbar's default margin-bottom and rounded borders /*/
-/*////////////////////////////////////////////////////////////////*/
-.navbar {
-  margin:0;
-  padding:0;
-  border-radius: 0;
-}
-/*                            END                                */
-
-/* ////////////////////////////////////////////////////////////// */
-/* ///////////////////// Jumbotron CSS ////////////////////////// */
-/* ////////////////////////////////////////////////////////////// */
-
-.jumbotron{
-  color:#fff;
-
-  background-image: url('../img/jumbo-bg2.jpg');
-  background-position: center;
-  background-size: cover;
-  background-color: whitesmoke;
-
-  margin:auto;
-
-}
-.jumbotron h1 {
-    font-size: 50px;
-}
-/* END */
 /* ////////////////////////////////////////////////////////////// */
 /* //////////////////// Live SECTION  /////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
@@ -87,7 +36,6 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
   background-color: #19171c;
 }
 .teamkhonsuList{
-  list-style: none;
   height: 100%;
   width: 100%;
   margin:0;
@@ -95,29 +43,6 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
 .featured-stream{
   width: 80%;
   background-color:green;
-}
-/* ////////////////////////////////////////////////////////////// */
-/* //////////////////// CARD SECTION  /////////////////////////// */
-/* ////////////////////////////////////////////////////////////// */
-.stream-family{
-  margin:0 auto;
-}
-
-/*The Top Margin For the results-section selectors*/
-.nav-section{
-  font-size: 15px;
-  margin-top:10px;
-}
-
-.results-section{
-  align-content: space-around;
-  text-align: center;
-}
-.row.card-container{
-  margin:0;
-  padding:0;
-  align-items: center;
-  text-align: center;
 }
 .card{
   color:#fff;
@@ -127,24 +52,6 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
   background-color: #19171c;
 
 }
-.cardList{
-  height: 50%;
-  margin: 0;
-  padding: 0;
-}
-.theCard{
-  margin:5px auto;
-  padding:0;
-  width: 300px;
-  border:#000;
-  background-color: #000;
-}
-.theCardIMG{
-  width: 300px;
-  padding:0;
-  margin:0;
-}
-
 .logo{
  border-radius:100%;
 
@@ -154,9 +61,21 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
  padding: 0;
  margin: auto;
 }
-.chatButton{
-  margin: 0 auto;
+img{
+  margin: 0;
   padding: 0;
+}
+.cardList{
+  height: 50%;
+  margin: 0;
+  padding: 0;
+}
+.theCard{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border:#000;
+  background-color: #000;
 }
 .card-text{
   text-align: center;
@@ -165,7 +84,6 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
   font-size:10px;
   color: #fff;
 }
-
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
@@ -196,9 +114,6 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
 
 @media (min-width:420px) {
 
-  .chat{
-    display: none;
-  }
 
 }
 /* ////////////////////////////////////////////////////////////// */
@@ -206,33 +121,6 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
 /* ////////////////////////////////////////////////////////////// */
 
 @media screen and (min-width:768px){
-
-
-  .jumbotron{
-    font-size: 50px;
-  }
-  .theStream{
-    height:275px;
-    padding:0;
-    margin:0;
-    background-color: #000;
-  }
-  .theCard{
-    width: 500px;
-    background-color: #000;
-  }
-  .theCardIMG{
-    width: 500px;
-    padding:0;
-    margin:0;
-  }
-  .chat{
-    height: 285px;
-    width: 100%;
-    margin:0;
-    padding: 0;
-    display:inline-block;
-  }
 
 
 
@@ -249,17 +137,5 @@ body::-webkit-scrollbar-thumb, .teamkhonsu::-webkit-scrollbar-thumb {
 }
 
 @media screen and (min-width:900px){
-
-
-  /* Jumbotron CSS */
-  .jumbotron{
-      padding:255px 0;
-  }
-
-  .jumbotron h1{
-    text-align: center;
-  }
-  /* END */
-
 
 }

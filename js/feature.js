@@ -5,7 +5,7 @@ $(document).ready(function() {
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
-  var twitchUserName = ['relaxbeats','MewtwoRaves','DarkAcreJack','sideshowmatt','blackdynamitetv','johanmoney','sblindside','vvarrentv',"thenutzxd",'michiganspartan','ritterriffic'];
+  var twitchUserName = ['MewtwoRaves','DarkAcreJack','sideshowmatt','blackdynamitetv','johanmoney','sblindside','vvarrentv',"thenutzxd",'michiganspartan','ritterriffic'];
 
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
@@ -106,5 +106,4 @@ $(document).ready(function() {
         }
       }
     })
-
   }

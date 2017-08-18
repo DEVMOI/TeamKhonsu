@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb,
 /* ////////////////////////////////////////////////////////////// */
 #live{
   max-height: 500px;
-  margin-top: 100px;
+  margin-top: 200px;
   margin-bottom:0;
 }
 
@@ -131,10 +131,13 @@ body::-webkit-scrollbar-thumb,
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 
-.twitter{
+.footer{
+  position: fixed;
   text-align: center;
   margin:0 auto;
+  padding:0  10px;
   bottom: 0;
+  color: #fff;
 }
 .twitter-timeline{
   margin: 0 auto;
@@ -145,6 +148,9 @@ body::-webkit-scrollbar-thumb,
 /* ////////////////////////////////////////////////////////////// */
 @media (min-width:280px) {
 
+  body{
+    overflow: hidden;
+  }
 
 }
 
@@ -160,9 +166,11 @@ body::-webkit-scrollbar-thumb,
 /* ////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////// */
 
-@media screen and (min-width:768px){
+@media screen and (max-width:950px){
 
-
+  #live{
+    margin-top: 250px;
+  }
 
 }
 
@@ -180,4 +188,5 @@ body::-webkit-scrollbar-thumb,
   body{
     overflow: hidden;
   }
+
 }

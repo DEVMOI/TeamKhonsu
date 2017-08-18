@@ -5,7 +5,7 @@ $(document).ready(function() {
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
-  var twitchUserName = ['relaxbeats','MewtwoRaves','DarkAcreJack','sideshowmatt','blackdynamitetv','johanmoney','sblindside','vvarrentv',"thenutzxd",'jamaica105','michiganspartan','ritterriffic','injectusdoll'];
+  var twitchUserName = ['relaxbeats','MewtwoRaves','DarkAcreJack','sideshowmatt','blackdynamitetv','johanmoney','sblindside','vvarrentv',"thenutzxd",'michiganspartan','ritterriffic'];
 
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
@@ -18,31 +18,6 @@ $(document).ready(function() {
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
-  //Activate Nav Pills
-  $(".selector").click(function() {
-		var status = $(this).attr('id');
-		if (status === "all-streams") {
-			$(".online, .offline").show();
-      $("#all-streams").addClass("active");
-      $("#online, #offline").removeClass("active");
-		} else if (status === "online") {
-			$(".online").show();
-			$(".offline").hide();
-      $("#online").addClass("active");
-      $("#all-streams, #offline").removeClass("active");
-		} else {
-			$(".offline").show();
-			$(".online").hide();
-      $("#offline").addClass("active");
-      $("#all-streams, #online").removeClass("active");
-		}
-	});
-
-  //Show chat
-  $(".chatButton").click(function () {
-    $(".chat").toggle();
-  });
-
 });
 
 //GET TWITCH API INFO
@@ -73,8 +48,6 @@ $(document).ready(function() {
               streamCard = "<div class='online overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'><span class='tag tag-success status-bar'>ONLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultImage + "' alt='" + twitchUserName + "logo'>" + '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'><strong>" + streamGame.toUpperCase() + ": </strong>" + streamInfo.toUpperCase() + "</p></a></div></div></div></div>";
               $(".card-container").append(streamCard);
             }
-
-
        } else {
           // If the channel is offline, get channel data
           $.ajax({
@@ -82,7 +55,7 @@ $(document).ready(function() {
             url:"https://api.twitch.tv/kraken/channels/" + twitchUserName,
             headers:{
               'Client-ID': 'dhtxhmg8vey6qz5y964c3u15vmcssa'
-      },
+            },
             success: function(data){
               var streamBanner = data.video_banner;
               var streamLogo = data.logo;
@@ -97,7 +70,7 @@ $(document).ready(function() {
                   url:"https://api.twitch.tv/kraken/users/" + twitchUserName,
                   headers:{
                     'Client-ID': 'dhtxhmg8vey6qz5y964c3u15vmcssa'
-      },
+                  },
                   success: function(data){
                     var streamMessage = data.error;
                     // var streamBanner = data.video_banner;
@@ -105,20 +78,20 @@ $(document).ready(function() {
                     var defaultThumb = "https://media.giphy.com/media/l3q31122uBsO7hpmw/source.gif";
                     //IF ACCOUNT HAS BEEN CLOSED BUILD STREAMCARD
                     if(streamMessage == "Unprocessable Entity"){
-                      streamCard = "<div class='offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>This Twitch account has been closed.</p></div></div></div></a></div>";
+                      streamCard = "<div class='offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>" + '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>This Twitch account has been closed.</p></div></div></div></a></div>";
                       $(".card-container").append(streamCard);
 		                } else if (streamMessage == "Not Found"){
                         //IF IT NEVER EXISTED
-                        streamCard = "<div class='offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'>" + "<img class='img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>"+ '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>This Twitch account never existed.</p></div></div></div></a></div>";
+                        streamCard = "<div class='offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>"+ '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>This Twitch account never existed.</p></div></div></div></a></div>";
                         $(".card-container").append(streamCard);
                     }else if (streamBanner == null && streamLogo == null){
                         //IF Banner AND  Logo don't Work
-                        streamCard = "<div class=' offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'>" + "<img class='theCard cardListIMG img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><iframe class='chat' src='https://www.twitch.tv/" + twitchUserName + "/chat?popout=' frameborder='0' scrolling='no'></iframe>" + "<br><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>"+ '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
+                        streamCard = "<div class=' offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>"+ '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
                         $(".card-container").append(streamCard);
                     }
                     else if (streamBanner == null){
                         //IF Banner Doesn't Exist
-                        streamCard = "<div class='offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'>" + "<img class='theCard cardListIMG img-fluid stream-cap' src='" + defaultImage + "' alt='" + twitchUserName + " image capture'><iframe class='chat' src='https://www.twitch.tv/" + twitchUserName + "/chat?popout=' frameborder='0' scrolling='no'></iframe>" + "<br><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>"+ '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
+                        streamCard = "<div class='offline overlay'>" + "<a target='myiframe' href='https://player.twitch.tv/?channel="+twitchUserName+"'><div class='card cardList cardFeature'><span class='tag tag-default status-bar'>OFFLINE</span>" + "<div class='card-block'>" + "<img class='round-logo img-responsive logo' src='" + defaultThumb + "' alt='" + twitchUserName + "logo'>"+ '<br>' + "<div class='text-padding'>" + "<p class='card-title'>" + twitchUserName.toUpperCase() + "</p><p class='card-text'>Not currently streaming.</p></div></div></div></a></div>";
                         $(".card-container").append(streamCard);
                     }
                   }
